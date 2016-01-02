@@ -1,6 +1,9 @@
 # yii console command
 /yii
 
+# configure
+main-local.php
+
 # phpstorm project files
 .idea
 
@@ -28,3 +31,9 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
+
+# runtime
+runtime
+
+# shop image
+/frontend/web/img/shop
