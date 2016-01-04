@@ -13,6 +13,20 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+        'request' => [
+            'baseUrl' => '/mng',
+        ],
+        'urlManager' => [
+            'class' => 'yii\web\UrlManager',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '/' => '/site/index',
+                '/<action>' => '/site/<action>',
+                '/<route>' => '/<route>/index',
+                '/<route>/<action>' => '/<route>/<action>',
+            ],
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

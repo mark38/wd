@@ -12,6 +12,27 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'request' => [
+            'baseUrl' => '',
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'rules' => [
+                '/sitemap.xml' => '/sitemap/index',
+                '/call-back' => '/callback/index',
+
+                //'/' => '/site/index',
+                //'/<action>' => '/site/<action>',
+
+                //'/' => '/site/index',
+                '<url:.+>' => '/site/index',
+
+                //'/' => '/main/catch',
+                //'<url:.+>' => '/main/catch',
+            ]
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
